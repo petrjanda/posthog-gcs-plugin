@@ -121,7 +121,7 @@ export const exportEvents: GCSPlugin['exportEvents'] = async (events, { global, 
         } = rows[i]
 
         // order is important
-        csvString += `${uuid},${event},${properties},${elements},${people_set},${people_set_once},${distinct_id},${team_id},${ip},${site_url},${timestamp}`
+        csvString += `${uuid},${event},"${properties}","${elements}","${people_set}","${people_set_once}",${distinct_id},${team_id},${ip},${site_url},${timestamp}`
 
         if (i !== rows.length - 1) {
             csvString += '\n'
